@@ -1,1 +1,8 @@
-{}
+{
+  "routes": [
+    {
+      "route": "/ico",
+      "redirect": "/index.html"
+    }
+  ]
+}
