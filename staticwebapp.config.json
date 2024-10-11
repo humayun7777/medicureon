@@ -2,7 +2,7 @@
   "routes": [
     {
       "route": "/presale",
-      "redirect": "/index.html"
+      "redirect": "."
     }
   ]
 }
