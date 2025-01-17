@@ -47,7 +47,42 @@
 </head>
 
 <body>
+<script>
+document.getElementById('contact-form-s2').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
 
+    // Perform validation
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let location = document.getElementById('location').value;
+    let message = document.querySelector('textarea[name="message"]').value;
+
+    if (name === '' || email === '' || location === '' || message === '') {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    // If validation passes, submit the form via AJAX
+    let formData = new FormData(this);
+
+    fetch(this.action, {
+        method: this.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById('success').style.display = 'block';
+        } else {
+            document.getElementById('error').style.display = 'block';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('error').style.display = 'block';
+    });
+});
+</script>
     <!-- start page-wrapper -->
     <div class="page-wrapper">
 
@@ -238,7 +273,7 @@
                     </div>
                     <div class="col col-md-6">
                         <div class="contact-form"> 
-                            <form method="post" id="contact-form-s2" class="form row contact-validation-active">
+                            <form method="post" id="contact-form-s2" class="form row contact-validation-active" action="submit_form.php">
                                 <div class="col col-xs-12">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
                                 </div>
