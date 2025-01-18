@@ -25,23 +25,13 @@
                     <span>- OR Continue with -</span>
                 </div>
 
-                <!-- Social Icons (These will link to Azure AD B2C Identity Providers) -->
-                <div class="social-icons">
-                    <div class="icon" id="google-login">
-                        <img src="icons8-google-48.png" alt="Sign in with Google">
-                    </div>
-                    <div class="icon" id="apple-login">
-                        <img src="icons8-apple-50.png" alt="Sign in with Apple">
-                    </div>
-                    <div class="icon" id="facebook-login">
-                        <img src="icons8-facebook-48.png" alt="Sign in with Facebook">
-                    </div>
-                </div>
+                <!-- Azure AD B2C Injected Social Buttons -->
+                <!-- Social login buttons will be handled by Azure AD B2C -->
 
                 <!-- Sign Up Link -->
                 <div class="signup-link">
                     <span>Don't have an account?</span>
-                    <a href="#">Sign Up</a>
+                    <a href="https://medicureonlab.b2clogin.com/<your-tenant>.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_signup">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -52,5 +42,8 @@
             <img class="logo" src="medicureon60x60.png" alt="Logo">
         </div>
     </div>
+
+    <!-- Azure AD B2C Content Injection Script -->
+    <script type="application/javascript" src="https://medicureonlab.b2clogin.com/static/js/1.0.0/contentInjection.js"></script>
 </body>
 </html>
