@@ -4,78 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        /* Basic styling for the page */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .container {
-            display: flex;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 900px;
-        }
-        .left-section {
-            flex: 1;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .left-section h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .left-section p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .divider {
-            text-align: center;
-            margin: 20px 0;
-            color: #999;
-        }
-        .signup-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .signup-link a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .right-section {
-            flex: 1;
-            background: #007bff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .right-section img.background-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .right-section img.logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -86,12 +16,17 @@
                 <p>Please sign in to continue.</p>
 
                 <!-- Azure AD B2C Content Injection Placeholder -->
-                <div id="api"></div>
+                <div id="api">
+                    <!-- Azure AD B2C dynamically injects login fields and social buttons here -->
+                </div>
 
                 <!-- OR Divider -->
                 <div class="divider">
                     <span>- OR Continue with -</span>
                 </div>
+
+                <!-- Azure AD B2C Injected Social Buttons -->
+                <!-- Social login buttons will be handled by Azure AD B2C -->
 
                 <!-- Sign Up Link -->
                 <div class="signup-link">
@@ -110,7 +45,7 @@
 
     <!-- Azure AD B2C Content Injection Script -->
     <script>
-        // Azure AD B2C will automatically inject the login form into the div with id="api"
+        
     </script>
 </body>
 </html>
