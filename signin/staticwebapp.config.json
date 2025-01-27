@@ -15,19 +15,3 @@
   }
 }
 
-{
-  "routes": [
-    {
-      "route": "/",
-      "rewrite": "/signin/index.html"
-    },
-    {
-      "route": "/signin",
-      "rewrite": "/signin/index.html"
-    },
-    {
-      "route": "/signin/*",
-      "rewrite": "/signin/index.html"
-    }
-  ]
-}
