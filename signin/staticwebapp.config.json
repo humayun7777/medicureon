@@ -1,0 +1,33 @@
+{
+  "routes": [
+    {
+      "route": "/signin/*",
+      "rewrite": "/index.html"
+    }
+  ],
+  "cors": {
+    "allowedOrigins": [
+      "https://medicureonprod.b2clogin.com",
+      "https://login.medicureon.com"
+    ],
+    "allowedMethods": ["GET", "POST", "OPTIONS"],
+    "allowedHeaders": ["*"]
+  }
+}
+
+{
+  "routes": [
+    {
+      "route": "/",
+      "rewrite": "/signin/index.html"
+    },
+    {
+      "route": "/signin",
+      "rewrite": "/signin/index.html"
+    },
+    {
+      "route": "/signin/*",
+      "rewrite": "/signin/index.html"
+    }
+  ]
+}
