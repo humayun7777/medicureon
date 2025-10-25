@@ -4747,6 +4747,7 @@ img {
   }
   .header-style-1 #navbar, .header-style-2 #navbar, .header-style-3 #navbar, .header-style-4 #navbar, .header-style-5 #navbar, .header-style-6 #navbar {
     margin-right: 115px;
+    padding-right: 0;
   }
 }
 
@@ -4756,6 +4757,7 @@ img {
   }
   .header-style-1 #navbar, .header-style-2 #navbar, .header-style-3 #navbar, .header-style-4 #navbar, .header-style-5 #navbar, .header-style-6 #navbar {
     margin-right: 130px;
+    padding-right: 0;
   }
 }
 
@@ -4767,7 +4769,7 @@ img {
 
 .header-style-1 .search-social, .header-style-2 .search-social, .header-style-3 .search-social, .header-style-4 .search-social, .header-style-5 .search-social, .header-style-6 .search-social {
   position: absolute;
-  right: 15px;
+  right: -80px;
   top: 32px;
 }
 
@@ -8670,6 +8672,16 @@ img {
 .blog-single-content .comment-respond form .comment-respond-submit {
   margin: 0;
   text-align: center;
+}
+
+/* Hide search area from header */
+.header-search-area {
+  display: none !important;
+}
+
+/* Hide social icons from header to prevent overlap */
+.search-social {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
